@@ -11,6 +11,6 @@ curl -fsSL https://raw.githubusercontent.com/ericfortinsp/synology-prometheus/ma
 
 #### Endpoints 
 - Grafana `http://<synology ip/hostname>:3000` (this may take upto 15 seconds to start up.)
-- Prometheus `http://<synology ip/hostname>:9090`
+- Prometheus `http://<synology ip/hostname>:9091`
 - Alertmanager `http://<synology ip/hostname>:9093`
 - Node-Exporter `http://<synology ip/hostname>:9100/metrics`

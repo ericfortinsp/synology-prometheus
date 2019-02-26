@@ -9,6 +9,9 @@ for i in "${folders[@]}"; do
   && echo "folder created ${PROMETHEUS_ROOT}/${i}"
 done
 
+chown 65534:65534 data/prometheus #nobody userid
+chown 472:472 data/grafana #grafana userid
+
 configs=( "grafana.ini" "prometheus.yml" )
 for i in "${configs[@]}"; do
   curl -fsSL https://raw.githubusercontent.com/ericfortinsp/synology-prometheus/master/configs/${i} -o ${PROMETHEUS_ROOT}/configs/${i}
@@ -24,7 +27,7 @@ docker-compose -f ${PROMETHEUS_ROOT}/docker-compose.yml up -d
 echo "
 #############################################
 Grafana       http://`hostname`:3000
-Prometheus    http://`hostname`:9090
+Prometheus    http://`hostname`:9091
 Alertmanager  http://`hostname`:9093
 Node-Exporter http://`hostname`:9100/metrics
 "

@@ -21,7 +21,7 @@ services:
       - alertmanager
       - node-exporter
     ports:
-      - "9090:9090"
+      - "9091:9090"
     volumes:
       - ${PROMETHEUS_ROOT}/configs/prometheus.yml:/etc/prometheus/prometheus.yml
       - ${PROMETHEUS_ROOT}/data/prometheus:/prometheus
