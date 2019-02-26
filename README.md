@@ -6,7 +6,7 @@
 
 ### Install
 ```bash
-curl -fsSL https://raw.githubusercontent.com/prahaladramji/synology-prometheus/master/setup | sudo sh
+curl -fsSL https://raw.githubusercontent.com/ericfortinsp/synology-prometheus/master/setup | sudo sh
 ```
 
 #### Endpoints 
